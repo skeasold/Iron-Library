@@ -1,0 +1,28 @@
+<%= form_for @book do |f| %>
+   <div class="mdl-textfield mdl-js-textfield">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "mdl-textfield__input" %>
+   </div>
+   <br>
+
+   <div class="mdl-textfield mdl-js-textfield">
+    <%= f.label :photo_url %>
+    <%= f.text_field :photo_url, class: "mdl-textfield__input" %>
+   </div>
+   <br>
+
+   <div class="mdl-textfield mdl-js-textfield">
+    <%= f.label :price %>
+    <%= f.text_field :price, class: "mdl-textfield__input" %>
+   </div>
+   <br>
+
+   <div class="mdl-textfield mdl-js-textfield">
+    <%= f.label :author_id %>
+    <%= f.text_field :author_id, class: "mdl-textfield__input" %>
+   </div>
+   <br>
+  <div>
+      <%= f.submit class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored" %>
+    </div>
+<% end %>

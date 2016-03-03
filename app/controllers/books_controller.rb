@@ -12,7 +12,7 @@ class BooksController < ApplicationController
     @book.title = params[:book][:title]
     @book.photo_url = params[:book][:title]
     @book.price = params[:book][:price]
-    @book.author_id = params[:author][:id]
+    @book.author_id = params[:book][:author_id]
     @book.save ? (redirect_to books_path) : (render :new)
   end
 
@@ -29,7 +29,7 @@ class BooksController < ApplicationController
     @book.title = params[:book][:title]
     @book.photo_url = params[:book][:photo_url]
     @book.price = params[:book][:price]
-    @book.author_id = params[:author][:id]
+    @book.author_id = params[:book][:author_id]
     @book.save ? (redirect_to book_path) : (render :edit)
   end
 

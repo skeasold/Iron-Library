@@ -1,0 +1,19 @@
+<%= form_for @author do |f| %>
+   <div class="mdl-textfield mdl-js-textfield">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, class: "mdl-textfield__input" %>
+   </div>
+   <div class="mdl-textfield mdl-js-textfield">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, class: "mdl-textfield__input" %>
+   </div>
+   <br>
+   <div class="mdl-textfield mdl-js-textfield">
+    <%= f.label :bio %>
+    <%= f.text_field :bio, class: "mdl-textfield__input" %>
+   </div>
+   <br>
+  <div>
+      <%= f.submit class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored" %>
+    </div>
+<% end %>

@@ -27,16 +27,16 @@
         <%= yield %>
       </div>
     </main>
+    <footer class="mdl-mini-footer mdl-color--blue-grey">
+      <div class="mdl-mini-footer__left-section">
+        <h4 class="mdl-color-text--white"><i class="material-icons">book</i> Iron Library</h4>
+        <ul class="mdl-mini-footer__link-list mdl-color-text--white">
+          <li><%= link_to "View on GitHub", "https://github.com/skylarking/Iron-Library" %>
+          <li><%= link_to "Report an Issue", "https://github.com/skylarking/Iron-Library/issues/new" %>
+          <li><%= link_to "License", license_path %></li>
+        </ul>
+      </div>
+    </footer>
   </div>
-  <footer class="mdl-mini-footer mdl-color--blue-grey">
-    <div class="mdl-mini-footer__left-section">
-      <h4 class="mdl-color-text--white"><i class="material-icons">book</i> Iron Library</h4>
-      <ul class="mdl-mini-footer__link-list mdl-color-text--white">
-        <li><%= link_to "View on GitHub", "https://github.com/skylarking/Iron-Library" %>
-        <li><%= link_to "Report an Issue", "https://github.com/skylarking/Iron-Library/issues/new" %>
-        <li><%= link_to "License", license_path %></li>
-      </ul>
-    </div>
-  </footer>
 </body>
 </html>
