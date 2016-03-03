@@ -1,7 +1,7 @@
 <h4><%= @book.title %></h4>
 
 <li><%= @book.title %></li>
-<li><%= @book.author_id %></li>
+<li><%= link_to @book.author.first_name, author_path(id: @book.author.id) %></li>
 <li><%= @book.price %></li>
 <li><%= @book.photo_url %></li>
 <br>
