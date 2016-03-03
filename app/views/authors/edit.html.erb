@@ -1,2 +1,5 @@
-<h4>Edit Author</h4>
+<h4>Edit <%= @author.first_name %> <%= @author.last_name %></h4>
 <%= render partial: 'form' %>
+<br>
+<%= link_to "Delete Author", author_path(id: @author.id), :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored", data: {confirm: "Are you sure you want to remove this author?"} %>
+<%= link_to "Return to Authors", authors_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" %>

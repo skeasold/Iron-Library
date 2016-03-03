@@ -1,2 +1,5 @@
-<h4>Edit Book</h4>
+<h4>Edit <%= @book.title %></h4>
 <%= render partial: 'form' %>
+<br>
+<%= link_to "Delete Book", book_path(id: @book.id), :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored", data: {confirm: "Are you sure you want to remove this book?"} %>
+<%= link_to "Return to Books", books_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" %>
