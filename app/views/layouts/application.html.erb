@@ -5,10 +5,39 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.blue-red.min.css">
+  <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
 </head>
 <body>
-<%= link_to "Books", books_path %> | <%= link_to "Authors", authors_path %>
-<%= yield %>
-
+  <div class="mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header mdl-layout__header--scroll">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title"><i class="material-icons">book</i>
+          <span>Iron Library</span></span>
+        <div class="mdl-layout-spacer"></div>
+        <nav class="mdl-navigation">
+          <%= link_to "Books", books_path, :class => "mdl-navigation__link" %>
+          <%= link_to "Authors", authors_path, :class => "mdl-navigation__link" %>
+        </nav>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <div class="page-content">
+        <%= yield %>
+      </div>
+    </main>
+  </div>
+  <footer class="mdl-mini-footer">
+    <div class="mdl-mini-footer__left-section">
+      <h4 class="mdl-color-text--white"><i class="material-icons">book</i> Iron Library</h4>
+      <hr>
+      <ul class="mdl-mini-footer__link-list">
+        <li><%= link_to "View on GitHub", "https://github.com/skylarking/Iron-Library" %>
+        <li><%= link_to "Report an Issue", "https://github.com/skylarking/Iron-Library/issues/new" %>
+        <li><%= link_to "License", license_path %></li>
+      </ul>
+    </div>
+  </footer>
 </body>
 </html>

@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   get 'books/:id/edit' => 'books#edit', as: :edit_book
   patch 'books/:id' => 'books#update'
 
+  get 'license' => 'public#license', as: :license
 
 end
