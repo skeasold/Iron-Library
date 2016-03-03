@@ -6,7 +6,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.blue-red.min.css">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.blue_grey-blue.min.css">
   <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
 </head>
 <body>
@@ -28,11 +28,10 @@
       </div>
     </main>
   </div>
-  <footer class="mdl-mini-footer">
+  <footer class="mdl-mini-footer mdl-color--blue-grey">
     <div class="mdl-mini-footer__left-section">
       <h4 class="mdl-color-text--white"><i class="material-icons">book</i> Iron Library</h4>
-      <hr>
-      <ul class="mdl-mini-footer__link-list">
+      <ul class="mdl-mini-footer__link-list mdl-color-text--white">
         <li><%= link_to "View on GitHub", "https://github.com/skylarking/Iron-Library" %>
         <li><%= link_to "Report an Issue", "https://github.com/skylarking/Iron-Library/issues/new" %>
         <li><%= link_to "License", license_path %></li>
