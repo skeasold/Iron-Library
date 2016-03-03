@@ -10,7 +10,7 @@ class BooksController < ApplicationController
   def create
     @book = Book.new
     @book.title = params[:book][:title]
-    @book.photo_url = params[:book][:title]
+    @book.photo = params[:book][:photo]
     @book.price = params[:book][:price]
     @book.author_id = params[:book][:author_id]
     @book.save ? (redirect_to books_path) : (render :new)
@@ -27,7 +27,7 @@ class BooksController < ApplicationController
   def update
     @book = Book.find_by id: params[:id]
     @book.title = params[:book][:title]
-    @book.photo_url = params[:book][:photo_url]
+    @book.photo = params[:book][:photo]
     @book.price = params[:book][:price]
     @book.author_id = params[:book][:author_id]
     @book.save ? (redirect_to book_path) : (render :edit)
