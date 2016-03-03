@@ -33,6 +33,6 @@ class AuthorsController < ApplicationController
 
   def delete
     @author = Author.find_by id: params[:id]
-    @author.destroy ? (redirect_to posts_path) : (render :edit)
+    @author.destroy ? (redirect_to authors_path) : (render :edit)
   end
 end

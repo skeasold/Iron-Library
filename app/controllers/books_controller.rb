@@ -35,6 +35,6 @@ class BooksController < ApplicationController
 
   def delete
     @book = Book.find_by id: params[:id]
-    @book.destroy ? (redirect_to posts_path) : (render :edit)
+    @book.destroy ? (redirect_to authors_path) : (render :edit)
   end
 end
