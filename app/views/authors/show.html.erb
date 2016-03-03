@@ -5,5 +5,4 @@
 <li><%= @author.bio %></li>
 <br>
 <%= link_to "Edit Author", edit_author_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" %>
-<%= link_to "Delete Author", author_path(id: @author.id), :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored", data: {confirm: "Are you sure you want to remove this author?"} %>
 <%= link_to "Return to Authors", authors_path, :class => "mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" %>
