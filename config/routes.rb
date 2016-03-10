@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   root 'books#index'
 
+  get 'login' => 'session#new', as: :login
+  post 'login' => 'session#create'
+  get 'logout' => 'session#delete', as: :logout
+
   get 'authors' => 'authors#index', as: :authors
   get 'authors/new' => 'authors#new', as: :new_author
   post 'authors' => 'authors#create'
