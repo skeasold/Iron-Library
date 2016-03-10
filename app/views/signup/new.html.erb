@@ -1,28 +1,33 @@
+<h5>Register</h5>
 <%= form_for @user do |f| %>
-   <div class="mdl-textfield mdl-js-textfield">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name, class: "mdl-textfield__input" %>
+  <div class="row">
+    <div class="input-field col s12">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
    </div>
-   <br>
+ </div>
 
-   <div class="mdl-textfield mdl-js-textfield">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name, class: "mdl-textfield__input" %>
+ <div class="row">
+     <div class="input-field col s12">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
    </div>
-   <br>
+ </div>
 
-   <div class="mdl-textfield mdl-js-textfield">
-    <%= f.label :email %>
-    <%= f.text_field :email, class: "mdl-textfield__input" %>
+ <div class="row">
+     <div class="input-field col s12">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
    </div>
-   <br>
+ </div>
 
-   <div class="mdl-textfield mdl-js-textfield">
-    <%= f.label :password %>
-    <%= f.text_field :password, class: "mdl-textfield__input" %>
+ <div class="row">
+     <div class="input-field col s12">
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
    </div>
-   <br>
+ </div>
   <div>
-      <%= f.submit class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored" %>
+      <%= f.submit class: "waves-effect waves-light btn light-blue darken-2 z-depth-0" %>
     </div>
 <% end %>
