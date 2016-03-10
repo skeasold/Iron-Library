@@ -51,3 +51,9 @@ input[type="password"]:focus:not([readonly]) {
 .row {
   margin-bottom: 5px;
 }
+.alert {
+  color: red;
+}
+.notice {
+  color: green;
+}

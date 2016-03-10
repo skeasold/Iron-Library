@@ -1,19 +1,17 @@
 <h5>Login</h5>
-    <%= form_tag do %>
-      <div class="row">
-        <div class="input-field col s12">
-          <%= label_tag :email %><br>
-          <%= text_field_tag :email %>
-        </div>
+<%= render :partial => 'layouts/flash' %>
+<%= form_tag do %>
+  <div class="row">
+    <div class="input-field col s12">
+      <%= label_tag :email %><br>
+      <%= text_field_tag :email %>
     </div>
-    <div class="row">
-      <div class="input-field col s12">
-        <%= label_tag :password %><br>
-        <%= password_field_tag :password %>
-      </div>
   </div>
-
-    <%= submit_tag "Login", class: "waves-effect waves-light btn light-blue darken-2 z-depth-0" %>
-
-
-    <% end %>
+  <div class="row">
+    <div class="input-field col s12">
+      <%= label_tag :password %><br>
+      <%= password_field_tag :password %>
+    </div>
+  </div>
+  <%= submit_tag "Login", class: "waves-effect waves-light btn light-blue darken-2 z-depth-0" %>
+<% end %>
