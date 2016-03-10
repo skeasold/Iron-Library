@@ -9,40 +9,41 @@
 </head>
 <body>
 <header>
-  <nav class="z-depth-0">
-    <div class="nav-wrapper blue darken-2">
-      <%= link_to "Iron Library", root_path, :class => "light-blue-text text-accent-1 brand-logo" %>
+  <nav class="z-depth-0 transparent">
+    <div class="nav-wrapper">
+      <%= link_to "Iron Library", root_path, :class => "light-blue-text text-darken-2 brand-logo" %>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><%= link_to "Books", books_path, :class => "light-blue-text text-accent-1" %></li>
-        <li><%= link_to "Authors", authors_path,
-          :class => "light-blue-text text-accent-1" %>
-        </li>
         <% if @current_user %>
-          <li><%= link_to "Sign Out", logout_path, :class => "light-blue-text text-accent-1" %></li>
+          <li><%= link_to "Books", books_path, :class => "light-blue-text text-darken-2" %></li>
+          <li><%= link_to "Authors", authors_path,
+            :class => "light-blue-text text-darken-2" %></li>
+          <li><%= link_to "Logout", logout_path, :class => "light-blue-text text-darken-2" %></li>
         <% else %>
-          <li><%= link_to "Sign In", login_path, :class => "light-blue-text text-accent-1" %></li>
+          <li><%= link_to "Login", login_path, :class => "light-blue-text text-darken-2" %></li>
+          <li><%= link_to "Register", signup_path, :class => "light-blue-text text-darken-2" %></li>
         <% end %>
       </ul>
     </div>
   </nav>
 </header>
-
-    <main class="mdl-layout__content" flex: 1 0 auto>
-      <div class="page-content">
-        <%= yield %>
-      </div>
-    </main>
+<main>
+  <div class="container grey-text text-darken-2">
+    <%= yield %>
+  </div>
+</main>
     <footer class="page-footer transparent">
       <div class="container">
         <div class="row valign-wrapper">
           <div class="col s12 grey-text center-align">
+            <%= link_to "Iron Library", "http://ironlibrary.skylarcking.com",
+            :class => "light-blue-text text-darken-2" %><br>
             © <%= Time.now.year %> <%= link_to "Skylar King", "http://www.skylarcking.com",
-            :class => "grey-text text-darken-3" %><br>
+            :class => "light-blue-text text-darken-2" %><br>
             <%= link_to "View on Github", "https://github.com/skylarking/Iron-Library",
-            :class => "grey-text text-darken-3" %><br>
+            :class => "light-blue-text text-darken-2" %><br>
             <%= link_to "Report an Issue", "https://github.com/skylarking/Iron-Library/issues/new",
-            :class => "grey-text text-darken-3" %><br>
-            <%= link_to "License", license_path, :class => "grey-text text-darken-3" %>
+            :class => "light-blue-text text-darken-2" %><br>
+            <%= link_to "License", license_path, :class => "light-blue-text text-darken-2" %>
           </div>
         </div>
       </div>

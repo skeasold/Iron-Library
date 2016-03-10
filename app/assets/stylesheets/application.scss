@@ -8,9 +8,43 @@ body {
 }
 main {
   flex: 1 0 auto;
+  margin-top: 30px;
   margin-bottom: 25px;
 }
 footer {
   font-size: 13px;
   margin-bottom: 15px;
+}
+.nav-wrapper {
+  padding-left: 40px;
+  padding-right: 30px;
+}
+.nav-wrapper ul li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.nav-wrapper ul li a:hover {
+  background-color: #e1f5fe;
+}
+h4 {
+  font-weight: 200;
+  color: #0288d1;
+}
+h5 {
+  font-weight: 200;
+  color: #0288d1;
+}
+input[type="text"]:focus:not([readonly]) {
+  border-bottom: 3px #0288d1;
+  box-shadow: 0 2px 0 0 #0288d1;
+}
+input[type="text"], input[type="password"]  {
+  border-bottom: 1px solid #0288d1;
+}
+input[type="password"]:focus:not([readonly]) {
+  border-bottom: 3px #0288d1;
+  box-shadow: 0 2px 0 0 #0288d1;
+}
+.input-field label {
+  color: #0288d1;
 }
