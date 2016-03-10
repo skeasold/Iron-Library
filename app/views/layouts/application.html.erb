@@ -1,45 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Ironlibrary</title>
+  <title>Iron Library</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.blue_grey-blue.min.css">
-  <script defer src="https://code.getmdl.io/1.1.1/material.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  <div class="mdl-layout mdl-js-layout mdl-layout--no-drawer-button">
-    <header class="mdl-layout__header mdl-layout__header--scroll">
-      <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title"><i class="material-icons">book</i>
-          <span><%= link_to "Iron Library", root_path, :class => "title_nav"%></span></span>
-        <div class="mdl-layout-spacer"></div>
-        <nav class="mdl-navigation">
-          <%= link_to "Books", books_path, :class => "mdl-navigation__link" %>
-          <%= link_to "Authors", authors_path, :class => "mdl-navigation__link" %>
-          <% if @current_user %>
-            <%= link_to "Sign Out", logout_path %>
-          <% else %>
-            <%= link_to "Sign In", login_path %>
-          <% end %>
-        </nav>
-      </div>
-    </header>
-    <main class="mdl-layout__content" flex: 1 0 auto>
-      <div class="page-content">
-        <%= yield %>
-      </div>
-    </main>
-    <footer class="mdl-mini-footer mdl-color--blue-grey">
-      <div class="mdl-mini-footer__left-section">
-        <h4 class="mdl-color-text--white"><i class="material-icons">book</i> Iron Library</h4>
-        <ul class="mdl-mini-footer__link-list mdl-color-text--white">
-          <li><%= link_to "View on GitHub", "https://github.com/skylarking/Iron-Library" %>
-          <li><%= link_to "Report an Issue", "https://github.com/skylarking/Iron-Library/issues/new" %>
-          <li><%= link_to "License", license_path %></li>
-        </ul>
+<header>
+  <nav class="z-depth-0 transparent">
+    <div class="nav-wrapper">
+      <%= link_to "Iron Library", root_path, :class => "light-blue-text text-darken-2 brand-logo" %>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <% if @current_user %>
+          <li><%= link_to "Books", books_path, :class => "light-blue-text text-darken-2" %></li>
+          <li><%= link_to "Authors", authors_path,
+            :class => "light-blue-text text-darken-2" %></li>
+          <li><%= link_to "Logout", logout_path, :class => "light-blue-text text-darken-2" %></li>
+        <% else %>
+          <li><%= link_to "Login", login_path, :class => "light-blue-text text-darken-2" %></li>
+          <li><%= link_to "Register", signup_path, :class => "light-blue-text text-darken-2" %></li>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+</header>
+<main>
+  <div class="container grey-text text-darken-2">
+    <%= yield %>
+  </div>
+</main>
+    <footer class="page-footer transparent">
+      <div class="container">
+        <div class="row valign-wrapper">
+          <div class="col s12 grey-text center-align">
+            <%= link_to "Iron Library", "http://ironlibrary.skylarcking.com",
+            :class => "light-blue-text text-darken-2" %><br>
+            © <%= Time.now.year %> <%= link_to "Skylar King", "http://www.skylarcking.com",
+            :class => "light-blue-text text-darken-2" %><br>
+            <%= link_to "View on Github", "https://github.com/skylarking/Iron-Library",
+            :class => "light-blue-text text-darken-2" %><br>
+            <%= link_to "Report an Issue", "https://github.com/skylarking/Iron-Library/issues/new",
+            :class => "light-blue-text text-darken-2" %><br>
+            <%= link_to "License", license_path, :class => "light-blue-text text-darken-2" %>
+          </div>
+        </div>
       </div>
     </footer>
   </div>
