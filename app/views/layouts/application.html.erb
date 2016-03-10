@@ -19,6 +19,11 @@
         <nav class="mdl-navigation">
           <%= link_to "Books", books_path, :class => "mdl-navigation__link" %>
           <%= link_to "Authors", authors_path, :class => "mdl-navigation__link" %>
+          <% if @current_user %>
+            <%= link_to "Sign Out", logout_path %>
+          <% else %>
+            <%= link_to "Sign In", login_path %>
+          <% end %>
         </nav>
       </div>
     </header>
