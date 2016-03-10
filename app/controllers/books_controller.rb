@@ -1,4 +1,12 @@
 class BooksController < ApplicationController
+
+  before_action do
+    @current_user = User.find_by id: session[:user_id]
+    if @current_user.blank?
+      redirect_to signup_path
+    end
+  end
+
   def index
     @books = Book.all
   end

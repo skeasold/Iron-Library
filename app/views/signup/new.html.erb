@@ -1,0 +1,28 @@
+<%= form_for @user do |f| %>
+   <div class="mdl-textfield mdl-js-textfield">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, class: "mdl-textfield__input" %>
+   </div>
+   <br>
+
+   <div class="mdl-textfield mdl-js-textfield">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name, class: "mdl-textfield__input" %>
+   </div>
+   <br>
+
+   <div class="mdl-textfield mdl-js-textfield">
+    <%= f.label :email %>
+    <%= f.text_field :email, class: "mdl-textfield__input" %>
+   </div>
+   <br>
+
+   <div class="mdl-textfield mdl-js-textfield">
+    <%= f.label :password %>
+    <%= f.text_field :password, class: "mdl-textfield__input" %>
+   </div>
+   <br>
+  <div>
+      <%= f.submit class: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored" %>
+    </div>
+<% end %>
